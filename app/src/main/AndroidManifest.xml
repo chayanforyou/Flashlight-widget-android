@@ -3,6 +3,7 @@
     package="ninja.majewski.flashlightwidget">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -20,7 +21,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/flashlight_widget_info" />
         </receiver>
-
         <receiver android:name=".FlashLightReceiver">
             <intent-filter>
                 <action android:name="majewski.ninja.flashlightwidget" />

@@ -14,8 +14,11 @@ public class FlashLightReceiver extends BroadcastReceiver {
     private static boolean isLightOn = false;
     private static Camera camera;
 
+    private static Context appContext;
+
     @Override
     public void onReceive(Context context, Intent intent) {
+        appContext = context;
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.flashlight_widget);
 
         if (isLightOn) {
@@ -53,4 +56,7 @@ public class FlashLightReceiver extends BroadcastReceiver {
             }
         }
     }
+
+
+
 }
